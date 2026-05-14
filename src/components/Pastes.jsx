@@ -14,7 +14,7 @@ function Pastes() {
       <h2 className="text-left text-xl tracking-wider pb-3 px-1.5 text-white font-bold font-mono">
         All Pastes
       </h2>
-      <div className="border-2 border-white/20 outline-none text-white px-2 py-3 w-full rounded-md transition-all custom-scrollbar min-h-[67vh] bg-gray-950/20 flex flex-col gap-3 shadow-xl">
+      <div className="border-2 border-white/20 outline-none text-white px-2 py-3 w-full rounded-md transition-all custom-scrollbar min-h-[50vh] sm:min-h-[67vh] bg-gray-950/20 flex flex-col gap-3 shadow-xl">
         {allPastes.map((p) => (
           <div
             key={p.id}
