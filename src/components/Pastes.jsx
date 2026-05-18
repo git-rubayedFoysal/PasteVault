@@ -21,7 +21,7 @@ function Pastes() {
             className="text-left flex flex-col sm:flex-row gap-3 sm:gap-x-20 border-2 px-2 py-2 rounded border-white/40 justify-between shadow-lg hover:scale-101 transition-all"
           >
             <div className="flex flex-col gap-2 overflow-x-clip">
-              <h2 className="text-xl sm:text-2xl font-bold cursor-default">
+              <h2 className="text-xl line-clamp-1 sm:text-2xl font-bold cursor-default">
                 {p.title}
               </h2>
               <p className="text-sm line-clamp-1 cursor-default">{p.content}</p>
