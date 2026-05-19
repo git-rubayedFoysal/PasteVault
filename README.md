@@ -45,18 +45,32 @@
 ## 📁 Project Structure
 
 ```
-src/
-├── components/
-│   ├── Navbar.jsx
-│   ├── Footer.jsx
-│   └── InputForm.jsx
-├── pages/
-│   └── Pastes.jsx
-├── Features/
-│   └── pasteSlice.js
-├── store/
-│   └── store.js
-└── App.jsx
+paste-vault/
+├── public/
+│   └── sticky-note.png
+├── src/
+│   ├── components/
+│   │   ├── Create.jsx         # Create paste page
+│   │   ├── EditPaste.jsx      # Edit paste page
+│   │   ├── Error.jsx          # 404 error page
+│   │   ├── Footer.jsx         # Footer component
+│   │   ├── InputForm.jsx      # Shared form (create/edit/view)
+│   │   ├── Navbar.jsx         # Navigation bar
+│   │   ├── Pastes.jsx         # All pastes list
+│   │   ├── ViewPaste.jsx      # View paste (read-only)
+│   │   └── index.js           # Component exports
+│   ├── Features/
+│   │   └── pasteSlice.js      # Redux slice + localStorage
+│   ├── Store/
+│   │   └── Store.js           # Redux store config
+│   ├── App.jsx                # Root layout + routes
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── vite.config.js
+├── package.json
+└── README.md
 ```
 
 ---
@@ -65,7 +79,7 @@ src/
 
 ### Prerequisites
 - Node.js 18+
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -92,9 +106,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 | Route | Component | Description |
 |---|---|---|
 | `/` | `Pastes` | All pastes list |
-| `/create` | `InputForm` | Create new paste |
-| `/paste/:id` | `InputForm` | View paste (read-only) |
-| `/edit/:id` | `InputForm` | Edit existing paste |
+| `/create` | `Create` | Create new paste |
+| `/paste/:id` | `ViewPaste` | View paste (read-only) |
+| `/edit/:id` | `EditPaste` | Edit existing paste |
 
 ---
 
@@ -105,12 +119,6 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 - **localStorage** is managed inside Redux slice reducers — no separate `useEffect` needed
 - **`useRef`** used for copy timer to prevent stale closure bugs
 - **Monaco Editor** replaces textarea for proper code formatting and syntax highlighting
-
----
-
-## 📸 Screenshots
-
-> Coming soon
 
 ---
 
